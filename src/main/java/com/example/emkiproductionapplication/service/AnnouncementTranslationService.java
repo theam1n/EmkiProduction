@@ -24,4 +24,12 @@ public class AnnouncementTranslationService {
                 .map((at)-> announcementTranslationMapper.entityToDto(at))
                 .collect(Collectors.toList());
     }
+
+    public List<AnnouncementTranslationDto> getAllByLanguageId(Long languageId) {
+        var ats = announcementTranslationRepository.
+        findAllByLanguageId(languageId);
+        return ats.stream()
+                .map((at)-> announcementTranslationMapper.entityToDto(at))
+                .collect(Collectors.toList());
+    }
 }

@@ -27,4 +27,11 @@ public class AnnouncementTranslationController {
     public List<AnnouncementTranslationDto> getAll() {
         return announcementTranslationService.getAll();
     }
+
+    @GetMapping("/{languageId}")
+    public List<AnnouncementTranslationDto> getAll(
+            @PathVariable Long languageId
+    ) {
+        return announcementTranslationService.getAll();
+    }
 }
