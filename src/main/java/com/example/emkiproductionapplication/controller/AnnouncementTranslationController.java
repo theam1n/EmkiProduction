@@ -32,6 +32,6 @@ public class AnnouncementTranslationController {
     public List<AnnouncementTranslationDto> getAll(
             @PathVariable Long languageId
     ) {
-        return announcementTranslationService.getAll();
+        return announcementTranslationService.getAllByLanguageId(languageId);
     }
 }
